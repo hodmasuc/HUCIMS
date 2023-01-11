@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="so.edu.hodmas.ims.hucims.DashboardController">
+   <children>
+      <GridPane layoutX="106.0" layoutY="41.0" style="-fx-background-color: #333;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="30.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="btn" text="Dashboard" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Poppins Medium" size="15.0" />
+               </font>
+            </Button>
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="btn" text="Students" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Poppins Medium" size="15.0" />
+               </font>
+            </Button>
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="btn" text="Instructors" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Poppins Medium" size="15.0" />
+               </font>
+            </Button>
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="btn" text="Courses" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Poppins Medium" size="15.0" />
+               </font>
+            </Button>
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="btn" text="Classes" GridPane.columnIndex="4" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Poppins Medium" size="15.0" />
+               </font>
+            </Button>
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="btn" text="Departments" GridPane.columnIndex="5" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Poppins Medium" size="15.0" />
+               </font>
+            </Button>
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="btn" text="Finance" GridPane.columnIndex="6" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Poppins Medium" size="15.0" />
+               </font>
+            </Button>
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="btn" text="Exams" GridPane.columnIndex="7" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Poppins Medium" size="15.0" />
+               </font>
+            </Button>
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="btn" text="Attendance" GridPane.columnIndex="8" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Poppins Medium" size="15.0" />
+               </font>
+            </Button>
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="btn" text="Assignment" GridPane.columnIndex="9" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Poppins Medium" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </GridPane>
+      <VBox layoutX="1.0" layoutY="65.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="65.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <VBox alignment="CENTER" prefWidth="219.5" style="-fx-background-color: #c6487e;">
+                     <children>
+                        <Label fx:id="students_lbl" styleClass="lbl h2" text="-" textFill="WHITE">
+                           <font>
+                              <Font name="Poppins Black" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label styleClass="lbl h2" text="Students" textFill="WHITE">
+                           <font>
+                              <Font name="Poppins Black" size="17.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="50.0" right="50.0" />
+                     </padding>
+                  </VBox>
+                  <VBox alignment="CENTER" prefWidth="219.5" style="-fx-background-color: #23527c;">
+                     <children>
+                        <Label fx:id="instructors_lbl" styleClass="lbl h2" text="-" textFill="WHITE">
+                           <font>
+                              <Font name="Poppins Black" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label styleClass="lbl h2" text="Instructors" textFill="WHITE">
+                           <font>
+                              <Font name="Poppins Black" size="17.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="50.0" right="50.0" />
+                     </padding>
+                  </VBox>
+                  <VBox alignment="CENTER" prefWidth="219.5" style="-fx-background-color: #38883e;">
+                     <children>
+                        <Label fx:id="depart_lbl" styleClass="lbl h2" text="-" textFill="WHITE">
+                           <font>
+                              <Font name="Poppins Black" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label styleClass="lbl h2" text="Departments" textFill="WHITE">
+                           <font>
+                              <Font name="Poppins Black" size="17.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="50.0" right="50.0" />
+                     </padding>
+                  </VBox>
+                  <VBox alignment="CENTER" prefWidth="219.5" style="-fx-background-color: #c17707;">
+                     <children>
+                        <Label fx:id="courses_lbl" styleClass="lbl h2" text="-" textFill="WHITE">
+                           <font>
+                              <Font name="Poppins Black" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label styleClass="lbl h2" text="Courses" textFill="WHITE">
+                           <font>
+                              <Font name="Poppins Black" size="17.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="50.0" right="50.0" />
+                     </padding>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" top="10.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
