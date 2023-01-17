@@ -1,23 +1,23 @@
 package so.edu.hodmas.ims.hucims.models;
 
 public class Instructor {
-    private int ID;
+    private Long ID;
     private String name;
     private String dept_name;
     private double salary;
 
-    public Instructor(int ID, String name, String dept_name, double salary) {
+    public Instructor(Long ID, String name, String dept_name, double salary) {
         this.ID = ID;
         this.name = name;
         this.dept_name = dept_name;
         this.salary = salary;
     }
 
-    public int getID() {
+    public Long getID() {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setID(Long ID) {
         this.ID = ID;
     }
 

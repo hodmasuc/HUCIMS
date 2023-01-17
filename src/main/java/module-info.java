@@ -5,5 +5,11 @@ module so.edu.hodmas.ims.hucims {
 
 
     opens so.edu.hodmas.ims.hucims to javafx.fxml;
+    opens so.edu.hodmas.ims.hucims.controllers to javafx.fxml;
+    opens so.edu.hodmas.ims.hucims.models to javafx.fxml;
+
     exports so.edu.hodmas.ims.hucims;
+    exports so.edu.hodmas.ims.hucims.controllers;
+    exports so.edu.hodmas.ims.hucims.models;
+
 }

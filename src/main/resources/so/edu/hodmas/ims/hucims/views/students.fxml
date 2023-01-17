@@ -4,15 +4,15 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<fx:root prefHeight="400.0" prefWidth="600.0" type="AnchorPane" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="so.edu.hodmas.ims.hucims.controllers.StudentsController">
    <children>
-      <TableView layoutX="220.0" layoutY="38.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <TableView fx:id="students_table" layoutX="220.0" layoutY="38.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <columns>
-          <TableColumn prefWidth="127.0" text="ID" />
-          <TableColumn prefWidth="206.0" text="Name" />
-            <TableColumn minWidth="0.0" prefWidth="126.0" text="Department" />
-            <TableColumn prefWidth="140.0" text="Total Credit" />
+          <TableColumn fx:id="id" prefWidth="127.0" text="id" />
+          <TableColumn fx:id="name" prefWidth="206.0" text="Name" />
+            <TableColumn fx:id="dept_name" minWidth="0.0" prefWidth="126.0" text="Department" />
+            <TableColumn fx:id="tot_cred" prefWidth="140.0" text="Total Credit" />
         </columns>
       </TableView>
    </children>
-</fx:root>
+</AnchorPane>
