@@ -2,14 +2,21 @@ package so.edu.hodmas.ims.hucims.controllers;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 import so.edu.hodmas.ims.hucims.Database;
+import so.edu.hodmas.ims.hucims.HUCIMSApplication;
 import so.edu.hodmas.ims.hucims.models.Instructor;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -38,7 +45,16 @@ public class InstructorController implements Initializable {
 
     @FXML
     private TableColumn<Instructor, Double> salary;
-
+    @FXML
+    public void OpenNewStage(ActionEvent event) throws IOException {
+        Button btn = ((Button)event.getSource());
+        Stage stage = (Stage) btn.getScene().getWindow();
+        String namefx = btn.getText().toLowerCase();
+        FXMLLoader fxmlLoader = new FXMLLoader(HUCIMSApplication.class.getResource("views/"+namefx+".fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 1200, 850);
+        stage.setTitle(btn.getText() + " HUC-IMS");
+        stage.setScene(scene);
+    }
 
     private void getInstructors(){
         try {

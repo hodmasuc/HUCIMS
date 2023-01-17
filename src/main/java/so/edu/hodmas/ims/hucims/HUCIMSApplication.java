@@ -10,7 +10,7 @@ import java.io.IOException;
 public class HUCIMSApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HUCIMSApplication.class.getResource("views/students.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HUCIMSApplication.class.getResource("views/dashboard.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1200, 850);
 
         stage.setTitle("HUC-IMS");
