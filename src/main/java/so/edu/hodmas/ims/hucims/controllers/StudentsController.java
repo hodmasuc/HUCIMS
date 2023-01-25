@@ -6,11 +6,15 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableRow;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import so.edu.hodmas.ims.hucims.Database;
 import so.edu.hodmas.ims.hucims.HUCIMSApplication;
@@ -23,6 +27,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class StudentsController implements Initializable {
@@ -98,6 +103,43 @@ public class StudentsController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
         getStudentsData();
+
+        students_table.setRowFactory(studentTableView -> {
+            TableRow<Student> studentTableRow = new TableRow<>();
+            studentTableRow.setOnMouseClicked(event -> {
+                if (event.getClickCount() == 2 && (! studentTableRow.isEmpty()) ) {
+                    Student student = studentTableRow.getItem();
+                    gotoEditPage(student);
+                }
+            });
+
+
+            return studentTableRow;
+        });
+
+    }
+
+    private void gotoEditPage(Student student) {
+
+
+        Stage stage = new Stage();
+        try {
+            FXMLLoader loader = new FXMLLoader(Objects.requireNonNull(HUCIMSApplication.class.getResource("views/student.fxml")));
+
+
+            StudentController studentController = new StudentController(student);
+
+            loader.setController(studentController);
+
+            Parent root = loader.load();
+
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+
+            stage.show();
+        } catch (IOException e) {
+            System.err.printf("Error: %s%n", e.getMessage());
+        }
 
     }
 }
